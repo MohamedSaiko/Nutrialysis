@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1730132BDE5B6D0020FBA9 /* NutritionFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1730122BDE5B6D0020FBA9 /* NutritionFactsViewModel.swift */; };
 		DB5A11082BD90337008F3385 /* NutrialysisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11072BD90337008F3385 /* NutrialysisApp.swift */; };
 		DB5A110A2BD90337008F3385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11092BD90337008F3385 /* ContentView.swift */; };
 		DB5A110C2BD90337008F3385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5A110B2BD90337008F3385 /* Assets.xcassets */; };
@@ -15,9 +16,18 @@
 		DB5A11192BD90BF3008F3385 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11182BD90BF3008F3385 /* Constants.swift */; };
 		DB5A111B2BD90C66008F3385 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A111A2BD90C66008F3385 /* NetworkManager.swift */; };
 		DB5A111E2BD90E7B008F3385 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A111D2BD90E7B008F3385 /* Food.swift */; };
+		DB5A11232BD913B4008F3385 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11222BD913B4008F3385 /* HomeViewModel.swift */; };
+		DB5A11252BD913C5008F3385 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11242BD913C5008F3385 /* HomeView.swift */; };
+		DB5A11272BDA5C4D008F3385 /* Nutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11262BDA5C4D008F3385 /* Nutrients.swift */; };
+		DB5A112C2BDB3C24008F3385 /* NutritionFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A112B2BDB3C24008F3385 /* NutritionFactsView.swift */; };
+		DB5A11312BDCD9E5008F3385 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11302BDCD9E5008F3385 /* DoubleExtension.swift */; };
+		DB5A11362BDE0D6D008F3385 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11352BDE0D6D008F3385 /* CoreDataManager.swift */; };
+		DB5A113D2BDE4085008F3385 /* NutritionsFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A113C2BDE4085008F3385 /* NutritionsFacts.swift */; };
+		DB5A11412BDE5683008F3385 /* FoodContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB5A113E2BDE5683008F3385 /* FoodContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB1730122BDE5B6D0020FBA9 /* NutritionFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsViewModel.swift; sourceTree = "<group>"; };
 		DB5A11042BD90337008F3385 /* Nutrialysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutrialysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5A11072BD90337008F3385 /* NutrialysisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrialysisApp.swift; sourceTree = "<group>"; };
 		DB5A11092BD90337008F3385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +38,15 @@
 		DB5A11182BD90BF3008F3385 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB5A111A2BD90C66008F3385 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DB5A111D2BD90E7B008F3385 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		DB5A11222BD913B4008F3385 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DB5A11242BD913C5008F3385 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DB5A11262BDA5C4D008F3385 /* Nutrients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrients.swift; sourceTree = "<group>"; };
+		DB5A112B2BDB3C24008F3385 /* NutritionFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsView.swift; sourceTree = "<group>"; };
+		DB5A11302BDCD9E5008F3385 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		DB5A11352BDE0D6D008F3385 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DB5A113C2BDE4085008F3385 /* NutritionsFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionsFacts.swift; sourceTree = "<group>"; };
+		DB5A113F2BDE5683008F3385 /* FoodEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodEntity.xcdatamodel; sourceTree = "<group>"; };
+		DB5A11402BDE5683008F3385 /* FoodContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +60,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1730112BDE5A8F0020FBA9 /* NutritionFacts */ = {
+			isa = PBXGroup;
+			children = (
+				DB1730122BDE5B6D0020FBA9 /* NutritionFactsViewModel.swift */,
+				DB5A112B2BDB3C24008F3385 /* NutritionFactsView.swift */,
+				DB5A113C2BDE4085008F3385 /* NutritionsFacts.swift */,
+			);
+			path = NutritionFacts;
+			sourceTree = "<group>";
+		};
 		DB5A10FB2BD90337008F3385 = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +90,12 @@
 			isa = PBXGroup;
 			children = (
 				DB5A11072BD90337008F3385 /* NutrialysisApp.swift */,
-				DB5A11162BD90B2E008F3385 /* Config.swift */,
-				DB5A11182BD90BF3008F3385 /* Constants.swift */,
-				DB5A111D2BD90E7B008F3385 /* Food.swift */,
-				DB5A111C2BD90C6D008F3385 /* Networking */,
+				DB5A112F2BDCD97E008F3385 /* Extensions */,
+				DB5A11202BD91311008F3385 /* Constants */,
+				DB5A111F2BD912FE008F3385 /* Models */,
+				DB5A113B2BDE2D78008F3385 /* Managers */,
+				DB1730112BDE5A8F0020FBA9 /* NutritionFacts */,
+				DB5A11212BD91390008F3385 /* Home */,
 				DB5A11092BD90337008F3385 /* ContentView.swift */,
 				DB5A110B2BD90337008F3385 /* Assets.xcassets */,
 				DB5A110D2BD90337008F3385 /* Nutrialysis.entitlements */,
@@ -81,12 +112,49 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		DB5A111C2BD90C6D008F3385 /* Networking */ = {
+		DB5A111F2BD912FE008F3385 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB5A111D2BD90E7B008F3385 /* Food.swift */,
+				DB5A11262BDA5C4D008F3385 /* Nutrients.swift */,
+				DB5A113E2BDE5683008F3385 /* FoodContainer.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DB5A11202BD91311008F3385 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DB5A11162BD90B2E008F3385 /* Config.swift */,
+				DB5A11182BD90BF3008F3385 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DB5A11212BD91390008F3385 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DB5A11222BD913B4008F3385 /* HomeViewModel.swift */,
+				DB5A11242BD913C5008F3385 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DB5A112F2BDCD97E008F3385 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB5A11302BDCD9E5008F3385 /* DoubleExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB5A113B2BDE2D78008F3385 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DB5A11352BDE0D6D008F3385 /* CoreDataManager.swift */,
 				DB5A111A2BD90C66008F3385 /* NetworkManager.swift */,
 			);
-			path = Networking;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,12 +227,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5A113D2BDE4085008F3385 /* NutritionsFacts.swift in Sources */,
+				DB1730132BDE5B6D0020FBA9 /* NutritionFactsViewModel.swift in Sources */,
 				DB5A110A2BD90337008F3385 /* ContentView.swift in Sources */,
 				DB5A11082BD90337008F3385 /* NutrialysisApp.swift in Sources */,
+				DB5A11232BD913B4008F3385 /* HomeViewModel.swift in Sources */,
+				DB5A11412BDE5683008F3385 /* FoodContainer.xcdatamodeld in Sources */,
+				DB5A11362BDE0D6D008F3385 /* CoreDataManager.swift in Sources */,
 				DB5A111B2BD90C66008F3385 /* NetworkManager.swift in Sources */,
 				DB5A11172BD90B2E008F3385 /* Config.swift in Sources */,
+				DB5A11252BD913C5008F3385 /* HomeView.swift in Sources */,
+				DB5A112C2BDB3C24008F3385 /* NutritionFactsView.swift in Sources */,
+				DB5A11312BDCD9E5008F3385 /* DoubleExtension.swift in Sources */,
 				DB5A11192BD90BF3008F3385 /* Constants.swift in Sources */,
 				DB5A111E2BD90E7B008F3385 /* Food.swift in Sources */,
+				DB5A11272BDA5C4D008F3385 /* Nutrients.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +460,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB5A113E2BDE5683008F3385 /* FoodContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB5A113F2BDE5683008F3385 /* FoodEntity.xcdatamodel */,
+				DB5A11402BDE5683008F3385 /* FoodContainer.xcdatamodel */,
+			);
+			currentVersion = DB5A11402BDE5683008F3385 /* FoodContainer.xcdatamodel */;
+			name = FoodContainer.xcdatamodeld;
+			path = /Users/mohamedsayed/Desktop/Nutrialysis/Nutrialysis/Models/FoodContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB5A10FC2BD90337008F3385 /* Project object */;
 }
