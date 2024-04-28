@@ -8,13 +8,14 @@
 import Foundation
 
 struct Food: Decodable {
-    let common: [Results]
+    let common: [CommonFood]
 }
 
-struct Results: Decodable {
+struct CommonFood: Decodable, Hashable {
     let foodName: String
+    let photo: Photo
 }
 
-enum CodingKeys: String, CodingKey {
-    case foodName = "food_name"
+struct Photo: Decodable, Hashable {
+    let thumb: URL
 }
