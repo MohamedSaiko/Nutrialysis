@@ -11,6 +11,9 @@ struct NutritionFactsView: View {
     @StateObject private var nutritionFactsViewModel = NutritionFactsViewModel(networkManager: NetworkManager(), nutrients: NutritionsFacts().nutrients)
     
     @EnvironmentObject var coreDataManager: CoreDataManager
+    @State private var isAdded = false
+    @State private var numberofAddedItems = 0
+    
     private let foodName: String
     
     init(foodName: String) {
@@ -18,44 +21,97 @@ struct NutritionFactsView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack {
-                AsyncImage(url: nutritionFactsViewModel.showNutrients().photo.highres) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                } placeholder: {
-                    ProgressView()
+        List {
+            FoodImageView(imageURL: nutritionFactsViewModel.photo)
+            
+            Picker("Quantity", selection: $nutritionFactsViewModel.quantitySelection) {
+                ForEach(nutritionFactsViewModel.quantities, id: \.self) { quantity in
+                    Text("\(quantity)")
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .padding()
-                
-                Text(nutritionFactsViewModel.showNutrients().foodName)
-                Text(nutritionFactsViewModel.showNutrients().nfCalories?.roundedTo(numberOfDecimals: 2, withString: "Calories") ?? "0")
-                
-                Picker("Measure", selection: $nutritionFactsViewModel.measureSelection) {
-                    ForEach(nutritionFactsViewModel.measures, id: \.self) { measures in
-                        Text(measures)
+            }
+            .pickerStyle(.menu)
+            
+            Picker("Measure", selection: $nutritionFactsViewModel.measureSelection) {
+                ForEach(nutritionFactsViewModel.measures, id: \.self) { measure in
+                    Text(measure)
+                }
+            }
+            .pickerStyle(.menu)
+            
+            NutrientsView(totalCalories: nutritionFactsViewModel.totalCalories, totalProteins: nutritionFactsViewModel.totalProteins, totalCarbs: nutritionFactsViewModel.totalCarbs, totalFats: nutritionFactsViewModel.totalFats, dietaryFiber: nutritionFactsViewModel.dietaryFiber, sugars: nutritionFactsViewModel.sugars, cholesterol: nutritionFactsViewModel.cholesterol, saturatedFat: nutritionFactsViewModel.saturatedFat, sodium: nutritionFactsViewModel.sodium, potassium: nutritionFactsViewModel.potassium)
+        }
+        .listStyle(.plain)
+        
+        VStack {
+            if isAdded {
+                Text("\(Image(systemName: "checkmark.circle.fill")) \(numberofAddedItems) Item\(numberofAddedItems > 1 ? "s": "" ) Added to Calories Balance Sheet. ")
+                    .foregroundStyle(Color.green)
+            }
+            
+            HStack {
+                Button {
+                    coreDataManager.deleteFood()
+                    numberofAddedItems -= nutritionFactsViewModel.quantitySelection
+                    if numberofAddedItems == 0 {
+                        isAdded = false
                     }
-                }
-                .pickerStyle(.menu)
-                
-                Text("you selected: \(nutritionFactsViewModel.measureSelection)")
-                    .onChange(of: nutritionFactsViewModel.measureSelection) {
-                        print(nutritionFactsViewModel.calculate(quantity: 2))
-                    }
-                Button("add") {
-                    coreDataManager.addNewFoodEntity(withfoodName: foodName)
-                }
-                .onChange(of: coreDataManager.foodEntities) {
-                    print(coreDataManager.foodEntities)
-                }
-                .onAppear {
-                    nutritionFactsViewModel.getNutrients(withfoodName: foodName) { nutrients in
-                        DispatchQueue.main.async {
-                            nutritionFactsViewModel.addNutrients(foodNutrients: nutrients)
+                } label: {
+                    HStack {
+                        HStack(spacing: 5){
+                            Image(systemName: "minus.circle")
+                            
+                            Text("Delete")
                         }
                     }
+                }
+                .disabled(!isAdded)
+                .frame(maxWidth: UIScreen.main.bounds.size.width/2, maxHeight: 40, alignment: .center)
+                .foregroundStyle(Color.black)
+                .background(!isAdded ? .gray.opacity(0.3) : .red)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                
+                Button {
+                    coreDataManager.addNewFoodEntity(withfoodName: foodName, calories: nutritionFactsViewModel.totalCalories, quantity: nutritionFactsViewModel.quantitySelection, measure: nutritionFactsViewModel.measureSelection, photo: nutritionFactsViewModel.photo) { result in
+                        isAdded = result
+                        numberofAddedItems += nutritionFactsViewModel.quantitySelection
+                    }
+                } label: {
+                    HStack {
+                        HStack(spacing: 5){
+                            Image(systemName: "plus.circle")
+                            
+                            Text("Add")
+                        }
+                        .padding(.horizontal)
+                        
+                        Spacer()
+                        
+                        Text(String(nutritionFactsViewModel.quantitySelection))
+                            .padding(.horizontal)
+                    }
+                }
+                .frame(maxWidth: UIScreen.main.bounds.size.width/2, maxHeight: 40, alignment: .center)
+                .foregroundStyle(Color.black)
+                .background(.green)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            .padding()
+        }
+        .navigationTitle(foodName.uppercased())
+        .navigationBarTitleDisplayMode(.inline)
+        .onChange(of: nutritionFactsViewModel.measureSelection) {
+            nutritionFactsViewModel.showTotalNutrients()
+            isAdded = false
+        }
+        .onChange(of: nutritionFactsViewModel.quantitySelection) {
+            nutritionFactsViewModel.showTotalNutrients()
+            isAdded = false
+        }
+        .onAppear {
+            isAdded = false
+            nutritionFactsViewModel.getNutrients(withfoodName: foodName) { nutrients in
+                DispatchQueue.main.async {
+                    nutritionFactsViewModel.addNutrients(foodNutrients: nutrients)
                 }
             }
         }
