@@ -16,26 +16,8 @@ struct HomeView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    TextField("Search Food", text: $homeViewModel.searchText)
+                    SearchBarView(searchText: $homeViewModel.searchText)
                         .focused($isFocuced)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal, 35)
-                        .background(Color.gray.opacity(0.15))
-                        .clipShape(.rect(cornerRadius: 8, style: .circular))
-                        .padding(.horizontal)
-                        .overlay(alignment: .leading) {
-                            Image(systemName: "magnifyingglass")
-                                .font(.system(size: 18))
-                                .foregroundColor(.gray)
-                                .padding(.horizontal, 25)
-                        }
-                        .overlay(alignment: .trailing) {
-                            Button("\(Image(systemName: "mic.fill"))") {
-                                print("speak now ....")
-                            }
-                            .font(.system(size: 20))
-                            .padding(.horizontal, 30)
-                        }
                     
                     if isFocuced {
                         withAnimation {
@@ -52,42 +34,22 @@ struct HomeView: View {
                 
                 if isFocuced {
                     withAnimation {
-                        List(homeViewModel.getfood(), id:\.self) { food in
-                            NavigationLink() {
-                                NutritionFactsView(foodName: food.foodName)
-                            } label: {
-                                HStack {
-                                    AsyncImage(url: food.photo.thumb) { image in
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 50, height: 50)
-                                    } placeholder: {
-                                        ProgressView()
-                                            .frame(width: 50, height: 50)
-                                    }
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .padding()
-                                    
-                                    Text("\(food.foodName)")
-                                }
-                            }
-                        }
-                        .listStyle(.inset)
+                        FoodSearchView(commonFoods: homeViewModel.getfood())
                     }
-//                } else if homeViewModel.checkNoFood() {
-//                    ContentUnavailableView("Search Food", systemImage: "magnifyingglass", description: Text("You don't have any added Food yet."))
+                    
+                } else if coreDataManager.foodEntities.isEmpty {
+                    ContentUnavailableView("Search Food", systemImage: "magnifyingglass", description: Text("You don't have any added Food yet."))
+                    
                 } else {
-                    List(coreDataManager.foodEntities) { foodEntity in
-                        Text(foodEntity.name ?? "no food")
+                    ScrollViewReader { proxy in
+                        DateSelectionView(foodEntities: coreDataManager.foodEntities, consumedDates: coreDataManager.consumedDates, proxy: proxy, action: homeViewModel.scrollToSelecedDate)
+                        
+                        AddedFoodView(consumedDates: coreDataManager.consumedDates, caloriesPerDay: coreDataManager.caloriesPerDay, foodEntities: coreDataManager.foodEntities, getIndex: coreDataManager.getIndex, deleteFood: coreDataManager.deleteFood)
                     }
                 }
             }
             .frame(maxHeight: .infinity, alignment: .top)
-            .onAppear {
-                homeViewModel.searchText = ""
-                homeViewModel.removeAllFood()
-            }
+            .navigationTitle("Nutrialysis")
             .onChange(of: homeViewModel.searchText) {
                 homeViewModel.showFoodResults { food in
                     DispatchQueue.main.async {
@@ -95,6 +57,10 @@ struct HomeView: View {
                         homeViewModel.addNewFood(food: food)
                     }
                 }
+            }
+            .onAppear {
+                homeViewModel.searchText = ""
+                homeViewModel.removeAllFood()
             }
         }
     }
