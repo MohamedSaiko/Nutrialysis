@@ -51,11 +51,32 @@ final class HomeViewModel: ObservableObject {
         return food
     }
     
-    func checkNoFood() -> Bool {
-        return food.isEmpty
-    }
-    
     func removeAllFood() {
         food.removeAll()
+    }
+    
+    func scrollToSelecedDate(consumedDates: [String], selectedDate: Date) -> Int {
+        let date = selectedDate.formatted(date: .abbreviated, time: .omitted)
+        var index = 0
+        
+        if consumedDates.contains(date) {
+            index = consumedDates.firstIndex(of: date) ?? Int()
+            return index
+        } else {
+            let calendar = Calendar.current
+            let SelectedYear = calendar.component(.year, from: selectedDate)
+            let SelectedMonth = calendar.component(.month, from: selectedDate)
+            
+            for day in 1...31 {
+                let component = DateComponents(calendar: calendar, year: SelectedYear, month: SelectedMonth, day: day)
+                let date = calendar.date(from: component)?.formatted(date: .abbreviated, time: .omitted)
+                
+                if consumedDates.contains(date ?? "") {
+                    index = consumedDates.firstIndex(of: date ?? "") ?? Int()
+                    return index
+                }
+            }
+        }
+        return Int()
     }
 }
