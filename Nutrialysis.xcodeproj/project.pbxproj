@@ -11,6 +11,10 @@
 		DB5A110A2BD90337008F3385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11092BD90337008F3385 /* ContentView.swift */; };
 		DB5A110C2BD90337008F3385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5A110B2BD90337008F3385 /* Assets.xcassets */; };
 		DB5A11102BD90337008F3385 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5A110F2BD90337008F3385 /* Preview Assets.xcassets */; };
+		DB5A11172BD90B2E008F3385 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11162BD90B2E008F3385 /* Config.swift */; };
+		DB5A11192BD90BF3008F3385 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A11182BD90BF3008F3385 /* Constants.swift */; };
+		DB5A111B2BD90C66008F3385 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A111A2BD90C66008F3385 /* NetworkManager.swift */; };
+		DB5A111E2BD90E7B008F3385 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5A111D2BD90E7B008F3385 /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		DB5A110B2BD90337008F3385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB5A110D2BD90337008F3385 /* Nutrialysis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nutrialysis.entitlements; sourceTree = "<group>"; };
 		DB5A110F2BD90337008F3385 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB5A11162BD90B2E008F3385 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DB5A11182BD90BF3008F3385 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB5A111A2BD90C66008F3385 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DB5A111D2BD90E7B008F3385 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				DB5A11072BD90337008F3385 /* NutrialysisApp.swift */,
+				DB5A11162BD90B2E008F3385 /* Config.swift */,
+				DB5A11182BD90BF3008F3385 /* Constants.swift */,
+				DB5A111D2BD90E7B008F3385 /* Food.swift */,
+				DB5A111C2BD90C6D008F3385 /* Networking */,
 				DB5A11092BD90337008F3385 /* ContentView.swift */,
 				DB5A110B2BD90337008F3385 /* Assets.xcassets */,
 				DB5A110D2BD90337008F3385 /* Nutrialysis.entitlements */,
@@ -67,6 +79,14 @@
 				DB5A110F2BD90337008F3385 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB5A111C2BD90C6D008F3385 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DB5A111A2BD90C66008F3385 /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +161,10 @@
 			files = (
 				DB5A110A2BD90337008F3385 /* ContentView.swift in Sources */,
 				DB5A11082BD90337008F3385 /* NutrialysisApp.swift in Sources */,
+				DB5A111B2BD90C66008F3385 /* NetworkManager.swift in Sources */,
+				DB5A11172BD90B2E008F3385 /* Config.swift in Sources */,
+				DB5A11192BD90BF3008F3385 /* Constants.swift in Sources */,
+				DB5A111E2BD90E7B008F3385 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
