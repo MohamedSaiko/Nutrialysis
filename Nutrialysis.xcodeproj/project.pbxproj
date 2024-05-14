@@ -26,10 +26,14 @@
 		DB8A5C5B2BECEE01002F3D1C /* FoodSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C5A2BECEE01002F3D1C /* FoodSearchView.swift */; };
 		DB8A5C5D2BECEFD6002F3D1C /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C5C2BECEFD6002F3D1C /* SearchBarView.swift */; };
 		DB8A5C612BED0613002F3D1C /* FoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C602BED0613002F3D1C /* FoodImageView.swift */; };
-		DB8A5C632BED076E002F3D1C /* NutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C622BED076E002F3D1C /* NutrientsView.swift */; };
+		DB8A5C632BED076E002F3D1C /* SodiumPotassiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C622BED076E002F3D1C /* SodiumPotassiumView.swift */; };
 		DB8A5C692BED3D55002F3D1C /* AddedFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C682BED3D55002F3D1C /* AddedFoodView.swift */; };
 		DB8A5C6B2BED42AB002F3D1C /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C6A2BED42AB002F3D1C /* DateSelectionView.swift */; };
 		DB8A5C6F2BF0C645002F3D1C /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5C6E2BF0C645002F3D1C /* ImageView.swift */; };
+		DBED774C2BF2E9AD00FF9F57 /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED774B2BF2E9AD00FF9F57 /* CaloriesView.swift */; };
+		DBED774E2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED774D2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift */; };
+		DBED77502BF2EAF400FF9F57 /* FibersSugarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED774F2BF2EAF400FF9F57 /* FibersSugarsView.swift */; };
+		DBED77522BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED77512BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,10 +59,14 @@
 		DB8A5C5A2BECEE01002F3D1C /* FoodSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchView.swift; sourceTree = "<group>"; };
 		DB8A5C5C2BECEFD6002F3D1C /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		DB8A5C602BED0613002F3D1C /* FoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageView.swift; sourceTree = "<group>"; };
-		DB8A5C622BED076E002F3D1C /* NutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsView.swift; sourceTree = "<group>"; };
+		DB8A5C622BED076E002F3D1C /* SodiumPotassiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodiumPotassiumView.swift; sourceTree = "<group>"; };
 		DB8A5C682BED3D55002F3D1C /* AddedFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedFoodView.swift; sourceTree = "<group>"; };
 		DB8A5C6A2BED42AB002F3D1C /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
 		DB8A5C6E2BF0C645002F3D1C /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		DBED774B2BF2E9AD00FF9F57 /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
+		DBED774D2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinsCarbsFatsView.swift; sourceTree = "<group>"; };
+		DBED774F2BF2EAF400FF9F57 /* FibersSugarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibersSugarsView.swift; sourceTree = "<group>"; };
+		DBED77512BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CholesterolSaturatedFatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +87,11 @@
 				DB1730122BDE5B6D0020FBA9 /* NutritionFactsViewModel.swift */,
 				DB5A112B2BDB3C24008F3385 /* NutritionFactsView.swift */,
 				DB8A5C602BED0613002F3D1C /* FoodImageView.swift */,
-				DB8A5C622BED076E002F3D1C /* NutrientsView.swift */,
+				DBED774B2BF2E9AD00FF9F57 /* CaloriesView.swift */,
+				DBED774D2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift */,
+				DBED774F2BF2EAF400FF9F57 /* FibersSugarsView.swift */,
+				DBED77512BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift */,
+				DB8A5C622BED076E002F3D1C /* SodiumPotassiumView.swift */,
 			);
 			path = NutritionFacts;
 			sourceTree = "<group>";
@@ -240,19 +252,23 @@
 				DB8A5C612BED0613002F3D1C /* FoodImageView.swift in Sources */,
 				DB5A113D2BDE4085008F3385 /* NutritionsFacts.swift in Sources */,
 				DB1730132BDE5B6D0020FBA9 /* NutritionFactsViewModel.swift in Sources */,
+				DBED774E2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift in Sources */,
 				DB1730172BDE6B330020FBA9 /* Config.swift in Sources */,
+				DBED77522BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift in Sources */,
 				DB8A5C6F2BF0C645002F3D1C /* ImageView.swift in Sources */,
-				DB8A5C632BED076E002F3D1C /* NutrientsView.swift in Sources */,
+				DB8A5C632BED076E002F3D1C /* SodiumPotassiumView.swift in Sources */,
 				DB5A110A2BD90337008F3385 /* ContentView.swift in Sources */,
 				DB5A11082BD90337008F3385 /* NutrialysisApp.swift in Sources */,
 				DB5A11232BD913B4008F3385 /* HomeViewModel.swift in Sources */,
 				DB5A11412BDE5683008F3385 /* FoodContainer.xcdatamodeld in Sources */,
 				DB5A11362BDE0D6D008F3385 /* CoreDataManager.swift in Sources */,
+				DBED77502BF2EAF400FF9F57 /* FibersSugarsView.swift in Sources */,
 				DB8A5C6B2BED42AB002F3D1C /* DateSelectionView.swift in Sources */,
 				DB8A5C5B2BECEE01002F3D1C /* FoodSearchView.swift in Sources */,
 				DB5A111B2BD90C66008F3385 /* NetworkManager.swift in Sources */,
 				DB5A11252BD913C5008F3385 /* HomeView.swift in Sources */,
 				DB5A112C2BDB3C24008F3385 /* NutritionFactsView.swift in Sources */,
+				DBED774C2BF2E9AD00FF9F57 /* CaloriesView.swift in Sources */,
 				DB8A5C692BED3D55002F3D1C /* AddedFoodView.swift in Sources */,
 				DB5A11192BD90BF3008F3385 /* Constants.swift in Sources */,
 				DB5A111E2BD90E7B008F3385 /* Food.swift in Sources */,
