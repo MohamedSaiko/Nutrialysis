@@ -49,12 +49,17 @@ final class NutritionFactsViewModel: ObservableObject {
         self.nutrients = nutrients
     }
     
-    func getNutrients(withfoodName name: String, completion: @escaping ([FoodNutrients]) -> Void) {
-        networkManager.sendFoodName(foodName: name) { (result: Result<Nutrients,NetworkError>) in
+    func getNutrients(withfoodName name: String) {
+        networkManager.sendFoodName(foodName: name) { [weak self] (result: Result<Nutrients,NetworkError>) in
+            guard let self else {
+                return
+            }
+            
             switch result {
             case .success(let nutrients):
-                completion(nutrients.foods)
-                
+                DispatchQueue.main.async {
+                    self.addNutrients(foodNutrients: nutrients.foods)
+                }
             case.failure(let error):
                 print(error)
             }
