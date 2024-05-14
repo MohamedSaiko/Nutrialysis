@@ -34,6 +34,7 @@
 		DBED774E2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED774D2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift */; };
 		DBED77502BF2EAF400FF9F57 /* FibersSugarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED774F2BF2EAF400FF9F57 /* FibersSugarsView.swift */; };
 		DBED77522BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED77512BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift */; };
+		DBED77542BF364B200FF9F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBED77532BF364B200FF9F57 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		DBED774D2BF2EA6000FF9F57 /* ProteinsCarbsFatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinsCarbsFatsView.swift; sourceTree = "<group>"; };
 		DBED774F2BF2EAF400FF9F57 /* FibersSugarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibersSugarsView.swift; sourceTree = "<group>"; };
 		DBED77512BF2EB7C00FF9F57 /* CholesterolSaturatedFatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CholesterolSaturatedFatView.swift; sourceTree = "<group>"; };
+		DBED77532BF364B200FF9F57 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				DB1730112BDE5A8F0020FBA9 /* NutritionFacts */,
 				DB5A11212BD91390008F3385 /* Home */,
 				DB5A11092BD90337008F3385 /* ContentView.swift */,
+				DBED77532BF364B200FF9F57 /* LaunchScreen.storyboard */,
 				DB5A110B2BD90337008F3385 /* Assets.xcassets */,
 				DB5A110D2BD90337008F3385 /* Nutrialysis.entitlements */,
 				DB5A110E2BD90337008F3385 /* Preview Content */,
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBED77542BF364B200FF9F57 /* LaunchScreen.storyboard in Resources */,
 				DB5A11102BD90337008F3385 /* Preview Assets.xcassets in Resources */,
 				DB5A110C2BD90337008F3385 /* Assets.xcassets in Resources */,
 			);
@@ -408,13 +412,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Nutrialysis;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -449,13 +454,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Nutrialysis;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
