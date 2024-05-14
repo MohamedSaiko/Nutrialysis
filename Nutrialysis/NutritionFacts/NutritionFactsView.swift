@@ -22,7 +22,14 @@ struct NutritionFactsView: View {
     
     var body: some View {
         List {
-            FoodImageView(imageURL: nutritionFactsViewModel.photo)
+            ZStack(alignment: .bottomTrailing) {
+                FoodImageView(imageURL: nutritionFactsViewModel.photo)
+                
+                Image(nutritionixLogo)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxHeight: 30)
+            }
             
             Picker("Quantity", selection: $nutritionFactsViewModel.quantitySelection) {
                 ForEach(nutritionFactsViewModel.quantities, id: \.self) { quantity in

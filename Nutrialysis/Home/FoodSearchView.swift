@@ -37,5 +37,10 @@ struct FoodSearchView: View {
             }
         }
         .listStyle(.inset)
+        
+        Image(nutritionixLogo)
+            .resizable()
+            .scaledToFit()
+            .frame(maxHeight: 30)
     }
 }

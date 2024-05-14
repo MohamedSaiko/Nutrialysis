@@ -16,3 +16,7 @@ let foodNutrientsURL = "https://trackapi.nutritionix.com/v2/natural/nutrients"
 
 let foodContainer = "FoodContainer"
 let foodEntity = "FoodEntity"
+
+// MARK: NutritionixLogo
+
+let nutritionixLogo = "NutritionixLogo"

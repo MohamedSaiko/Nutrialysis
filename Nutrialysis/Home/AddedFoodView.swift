@@ -63,5 +63,10 @@ struct AddedFoodView: View {
             }
         }
         .listStyle(.insetGrouped)
+        
+        Image(nutritionixLogo)
+            .resizable()
+            .scaledToFit()
+            .frame(maxHeight: 30)
     }
 }
