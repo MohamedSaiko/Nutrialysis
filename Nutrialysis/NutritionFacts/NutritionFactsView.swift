@@ -38,7 +38,15 @@ struct NutritionFactsView: View {
             }
             .pickerStyle(.menu)
             
-            NutrientsView(totalCalories: nutritionFactsViewModel.totalCalories, totalProteins: nutritionFactsViewModel.totalProteins, totalCarbs: nutritionFactsViewModel.totalCarbs, totalFats: nutritionFactsViewModel.totalFats, dietaryFiber: nutritionFactsViewModel.dietaryFiber, sugars: nutritionFactsViewModel.sugars, cholesterol: nutritionFactsViewModel.cholesterol, saturatedFat: nutritionFactsViewModel.saturatedFat, sodium: nutritionFactsViewModel.sodium, potassium: nutritionFactsViewModel.potassium)
+            CaloriesView(totalCalories: nutritionFactsViewModel.totalCalories)
+            
+            ProteinsCarbsFatsView(totalProteins: nutritionFactsViewModel.totalProteins, totalCarbs: nutritionFactsViewModel.totalCarbs, totalFats: nutritionFactsViewModel.totalFats)
+            
+            FibersSugarsView(dietaryFiber: nutritionFactsViewModel.dietaryFiber, sugars: nutritionFactsViewModel.sugars)
+            
+            CholesterolSaturatedFatView(cholesterol: nutritionFactsViewModel.cholesterol, saturatedFat: nutritionFactsViewModel.saturatedFat)
+            
+            SodiumPotassiumView(sodium: nutritionFactsViewModel.sodium, potassium: nutritionFactsViewModel.potassium)
         }
         .listStyle(.plain)
         
@@ -109,11 +117,7 @@ struct NutritionFactsView: View {
         }
         .onAppear {
             isAdded = false
-            nutritionFactsViewModel.getNutrients(withfoodName: foodName) { nutrients in
-                DispatchQueue.main.async {
-                    nutritionFactsViewModel.addNutrients(foodNutrients: nutrients)
-                }
-            }
+            nutritionFactsViewModel.getNutrients(withfoodName: foodName)
         }
     }
 }
