@@ -51,12 +51,7 @@ struct HomeView: View {
             .frame(maxHeight: .infinity, alignment: .top)
             .navigationTitle("Nutrialysis")
             .onChange(of: homeViewModel.searchText) {
-                homeViewModel.showFoodResults { food in
-                    DispatchQueue.main.async {
-                        homeViewModel.removeAllFood()
-                        homeViewModel.addNewFood(food: food)
-                    }
-                }
+                homeViewModel.showFoodResults()
             }
             .onAppear {
                 homeViewModel.searchText = ""

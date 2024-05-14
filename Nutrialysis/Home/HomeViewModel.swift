@@ -35,10 +35,17 @@ final class HomeViewModel: ObservableObject {
         }
     }
     
-    func showFoodResults(completion: @escaping (Food) -> Void) {
+    func showFoodResults() {
         if !searchText.isEmpty {
-            getFilteredFoodResults(foodName: searchFood) { food in
-                completion(food)
+            getFilteredFoodResults(foodName: searchFood) { [weak self] food in
+                guard let self else {
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self.removeAllFood()
+                    self.addNewFood(food: food)
+                }
             }
         }
     }
