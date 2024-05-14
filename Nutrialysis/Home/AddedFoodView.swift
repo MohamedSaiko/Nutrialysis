@@ -62,6 +62,6 @@ struct AddedFoodView: View {
                 }
             }
         }
-        .listStyle(.grouped)
+        .listStyle(.insetGrouped)
     }
 }
