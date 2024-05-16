@@ -1,7 +1,7 @@
 Nutrialysis
 
 Food Nutritional Analysis iOS App that gives you the Ability to search any Kind of Food and gives you the Nutritional Facts of this Food.
-It also helps you tracking Your Daily Calories intake and gives you A Calories Balance Sheet for the Day of Your Choice, It's helpful for those who are on diet Plans, BodyBuilders and Athletes.
+It also helps you track Your Daily calorie intake and gives you A Calories Balance Sheet for the Day of Your Choice. It's helpful for those who are on diet Plans, BodyBuilders and Athletes.
 
 - UI implementation using SwiftUI
 - Networking using URL Session
